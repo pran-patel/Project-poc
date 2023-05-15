@@ -1,0 +1,21 @@
+package com.poc.service.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import com.poc.payload.ApiResposne;
+
+@RestControllerAdvice
+public class MyExceptionHandler {
+
+	@ExceptionHandler(ResouceNotFoundException.class)
+	public ResponseEntity<ApiResposne> handleResourceNotFoundException(ResouceNotFoundException exception)
+	{	
+		System.out.println("exception...............");
+		ApiResposne response = new ApiResposne(exception.getMessage(), HttpStatus.NOT_FOUND);
+		return new ResponseEntity<ApiResposne>(response, HttpStatus.NOT_FOUND);
+		
+	}
+}

@@ -1,0 +1,15 @@
+package com.poc.service;
+
+import java.util.List;
+
+import com.poc.entities.Customer;
+
+public interface CustomerService {
+
+	Customer addCustomer(Customer customer);
+
+	List<Customer> getAllCustomer();
+
+	Customer getCustomerByEmailId(String emailId);
+
+}

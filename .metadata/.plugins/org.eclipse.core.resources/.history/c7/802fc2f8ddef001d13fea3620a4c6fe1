@@ -1,0 +1,15 @@
+package com.poc.payload;
+
+import org.springframework.http.HttpStatus;
+
+public class ApiResposne {
+
+	private String message;
+	private HttpStatus status;
+	public ApiResposne(String message, HttpStatus status) {
+		super();
+		this.message = message;
+		this.status = status;
+	}
+	
+}

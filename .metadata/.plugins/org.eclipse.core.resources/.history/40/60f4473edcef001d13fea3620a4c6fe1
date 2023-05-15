@@ -1,0 +1,14 @@
+package com.poc.service.exception;
+
+public class ResouceNotFoundException extends Exception{
+	public ResouceNotFoundException()
+	{
+		super("Resource not found on server");
+	}
+	
+	public ResouceNotFoundException(String message)
+	{
+		super(message);
+	}
+	
+}

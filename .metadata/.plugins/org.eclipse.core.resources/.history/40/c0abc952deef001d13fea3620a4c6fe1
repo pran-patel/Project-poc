@@ -1,0 +1,5 @@
+package com.poc.service.exception;
+
+public class ExceptionHandler {
+
+}

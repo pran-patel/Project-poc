@@ -1,0 +1,27 @@
+package com.poc.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.poc.entities.Customer;
+import com.poc.repository.CustomerRepository;
+import com.poc.service.CustomerService;
+@Service
+public class CustomerServiceImpl implements CustomerService{
+
+	@Autowired 
+	private CustomerRepository customerRepository;
+	
+	@Override
+	public Customer addCustomer(Customer customer) {
+		return customerRepository.save(customer);
+	}
+
+	@Override
+	public List<Customer> getAllCustomer() {
+		return customerRepository.findAll();
+	}
+
+}
